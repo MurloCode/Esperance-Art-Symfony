@@ -2,8 +2,30 @@
 <nav class="mt-3">
 	<ul class="nav nav-pills justify-content-end">
 		<li class="nav-item">
-			<a class="nav-link{{ currentRoute == 'accueil' ? ' active' : '' }}" aria-current="true" href="{{ path ('accueil') }}">Accueil</a>
+			<a class="nav-link{{ currentRoute == 'accueil' ? ' active' : '' }}" aria-current="page" href="{{ path ('accueil') }}">Accueil</a>
 		</li>
+		<li class="nav-item">
+			<a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Réserver un cours</a>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Attention redirection !</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body text-center mt-3 mb-3">
+						Pour réverser un cours,<br>
+						 vous allez être rediriger vers le site Superprof
+						</div>
+						<div class="modal-footer justify-content-around">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+							<button type="button" class="btn btn-primary">ok !</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>	
 		<li class="nav-item">
 			<a class="nav-link{{ currentRoute == 'portfolio' ? ' active' : '' }}" href="{{ path ('portfolio') }}">Portfolio</a>
 		</li>
